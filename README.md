@@ -7,7 +7,7 @@ appropriate release, then run:
 # ensure npm version 10 is installed
 pkg install -y npm-node10 yarn-node10
 # ignore errors here
-env PATH=${HOME}/go/bin:${PATH} gmake bootstrap static-dist static-assets dev-ui
+env GOPATH=$(mktemp -d) PATH=${PATH}:${GOPATH}/bin gmake bootstrap static-dist static-assets dev-ui
 ```
 
 Then copy `http/bindata_assetfs.go` to this repo.
