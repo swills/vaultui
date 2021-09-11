@@ -11,6 +11,7 @@ export GOPATH=$(mktemp -d)
 export PATH=${PATH}:${GOPATH}/bin
 gmake bootstrap static-dist static-assets dev-ui
 ```
+Note: the static-dist can take 18 minutes or more
 
 Then copy `http/bindata_assetfs.go` to this repo.
 
